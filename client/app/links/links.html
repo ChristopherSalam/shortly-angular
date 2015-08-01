@@ -6,18 +6,23 @@
     </ul>
     <a href='/logout' class='logout'>Logout</a>
   </div>
+  <div style="padding:10px;"><input placeholder="search" ng-model="search"></div>
   <div id='container'>
-    <ul ng-repeat="link in data.links">
-      <li>
+    <ol class='link' ng-repeat="link in data.links | filter:orderBy:visits | filter:search">
+      <li ng-class-odd="'odd'" ng-class-even="'even'">
         <img src='/redirect_icon.png'/>
         <div class='info'>
           <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
           <div class='title'>{{link.title}}</div>
           <div class='original'>{{link.url}}</div>
           <a href='{{link.base_url}}/api/links/{{link.code}}'>{{link.base_url}}/api/links/{{link.code}}</a>
+ <!--          <div>
+            <iframe sandbox="allow-top-navigation" ng-src ='{{trustSrc(link.url)}}' ></iframe>
+          </div> -->
         </div>
+
       </li>
-    </ul>
+    </ol>
   </div>
 
 </div>

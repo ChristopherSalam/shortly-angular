@@ -13,6 +13,27 @@ a {
 h1 {
   font-style: italic;
   margin-bottom: 10px;
+
+  font-size:100px;
+
+  color: #333;
+  text-shadow:
+    0 1px 0px #333,
+    1px 0 0px #5dabcd,
+    1px 2px 1px #333,
+    2px 1px 1px #5dabcd,
+    2px 3px 2px #333,
+    3px 2px 2px #5dabcd,
+    3px 4px 2px #333,
+    4px 3px 3px #5dabcd,
+    4px 5px 3px #333,
+    5px 4px 2px #5dabcd,
+    5px 6px 2px #333,
+    6px 5px 2px #5dabcd,
+    6px 7px 1px #333,
+    7px 6px 1px #5dabcd,
+    7px 8px 0px #333,
+    8px 7px 0px #5dabcd;
 }
 
 .navigation {
@@ -71,6 +92,28 @@ h1 {
   margin-bottom: 5px;
   padding: 5px;
   min-height: 50px;
+  list-style-type: none;
+}
+
+.odd {
+  /*background-color: #fef;*/
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fb83fa+0,e93cec+100;Pink+3D+%232 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5c9d3+0,d1a7b8+100 */
+background: rgb(229,201,211); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(229,201,211,1) 0%, rgba(209,167,184,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,201,211,1)), color-stop(100%,rgba(209,167,184,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(229,201,211,1) 0%,rgba(209,167,184,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(229,201,211,1) 0%,rgba(209,167,184,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(229,201,211,1) 0%,rgba(209,167,184,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(229,201,211,1) 0%,rgba(209,167,184,1) 100%); /* W3C */
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5c9d3', endColorstr='#d1a7b8',GradientType=0 ); /* IE6-9 */
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+    -webkit-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.37);
+  -moz-box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.37);
+  box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.37);
 }
 
 .link:hover {
@@ -79,7 +122,7 @@ h1 {
 
 .link img {
   float: left;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
 .link .visits {
@@ -91,6 +134,7 @@ h1 {
 .link .visits .count {
   font-size: 46px;
   font-weight: 600;
+  padding-right: 10px
 }
 
 .link .title {
@@ -98,7 +142,7 @@ h1 {
 }
 
 .link .original {
-  color: #aaa;
+  color: #000;
   font-size: 12px;
 }
 
