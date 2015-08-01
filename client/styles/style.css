@@ -48,6 +48,19 @@ h1 {
   background-color: #ccc;
 }
 
+.navigation .logout {
+  float: right;
+}
+
+.navigation li a , .logout {
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
 #container {
   clear: both;
   margin-top: 10px;
@@ -146,3 +159,7 @@ input[type=url]:focus {
   clear: both;
 }
 
+.submitted.ng-invalid
+{
+    border:1px solid #f00;
+}

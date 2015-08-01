@@ -19,7 +19,7 @@ angular.module('shortly.services', [])
     })
     .then(function (resp) {
       // console.log("post happened", resp.data.token); 
-      return resp.data.token;
+      return resp.data;
     })
   }
   return {

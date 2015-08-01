@@ -8,9 +8,27 @@
   </div>
   <div id='container'></div>
   <form name="shortenForm" ng-submit='addLink()'>
-      <input class='text' type='text' name='url' ng-model='link.url'>
+      <label>Enter Site Name:</label>
+      <input type="url" ng-model="link.url" name="name" required class="ng-pristine ng-invalid submitted" />
+      <span style="color:red" ng-show="shortenForm.name.$error.required">
+      You Can't Leave This Field Empty</span>
+      <span style="color:red" ng-show="shortenForm.name.$error.url">
+      Sorry Not a Valid URL, Don't Forget to Use http://</span>
+      <br />
       <button>Shorten</button>
   </form>
   <!--<img class='spinner' src='/spiffygif_46x46.gif'>-->
-  <div class='message'></div>
+  <div class='message'>
+    <ul ng-repeat="link in mostRecentLink">
+      <li>
+        <img src='/redirect_icon.png'/>
+        <div class='info'>
+          <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
+          <div class='title'>{{link.title}}</div>
+          <div class='original'>{{link.url}}</div>
+          <a href='{{link.base_url}}/api/links/{{link.code}}'>{{link.base_url}}/api/links/{{link.code}}</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
